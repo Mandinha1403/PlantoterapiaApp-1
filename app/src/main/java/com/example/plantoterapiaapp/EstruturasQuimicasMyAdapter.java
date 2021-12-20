@@ -36,13 +36,13 @@ public class EstruturasQuimicasMyAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         MyItem myItem = estruturas_quimicas.get(position);
         View v = holder.itemView;
-        ImageView imvPhoto = v.findViewById(R.id.estrutura_quimica_foto);
+        ImageView imvPhoto = v.findViewById(R.id.imvEstruturaQuimicaFoto);
         imvPhoto.setImageBitmap(myItem.photo);
 
-        TextView tvTitle = v.findViewById(R.id.estrutura_quimica_titulo);
+        TextView tvTitle = v.findViewById(R.id.tvEstruturaQuimicaTitulo);
         tvTitle.setText(myItem.title);
 
-        TextView tvDescription = v.findViewById(R.id.estrutura_quimica_descricao);
+        TextView tvDescription = v.findViewById(R.id.tvEstruturaQuimicaDescricao);
         tvDescription.setText(myItem.description);
 
     }

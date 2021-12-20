@@ -36,13 +36,13 @@ public class ReceitasMyAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         MyItem myItem = receitas.get(position);
         View v = holder.itemView;
-        ImageView imvPhoto = v.findViewById(R.id.imvEstruturaQuimicaFoto);
+        ImageView imvPhoto = v.findViewById(R.id.imvReceitaFoto);
         imvPhoto.setImageBitmap(myItem.photo);
 
-        TextView tvTitle = v.findViewById(R.id.tvEstruturaQuimicaTitulo);
+        TextView tvTitle = v.findViewById(R.id.tvReceitaTitulo);
         tvTitle.setText(myItem.title);
 
-        TextView tvDescription = v.findViewById(R.id.tvEstruturaQuimicaDescricao);
+        TextView tvDescription = v.findViewById(R.id.tvReceitaDescricao);
         tvDescription.setText(myItem.description);
 
     }

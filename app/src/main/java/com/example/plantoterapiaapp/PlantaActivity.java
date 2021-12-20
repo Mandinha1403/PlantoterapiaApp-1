@@ -1,7 +1,9 @@
 package com.example.plantoterapiaapp;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,6 +13,9 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -30,6 +35,10 @@ public class PlantaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planta);
+
+        // Pega a toolbar da interface usando seu ID e define ele como a barra da atividade
+        Toolbar toolbar = findViewById(R.id.tbPlanta);
+        setSupportActionBar(toolbar);
 
         FloatingActionButton fabCriarPost = findViewById(R.id.fabCriarPost); // Define um floatingactionbutton da interface através de seu id
         fabCriarPost.setOnClickListener(new View.OnClickListener() { // Define o que ocorre ao clicar no botão definido
@@ -82,14 +91,42 @@ public class PlantaActivity extends AppCompatActivity {
                 newItem.description = description; // Define a descrição da foto do item criado anteriormente como a descrição definida aqui anteriormente
 
 
-                PlantaActivityViewModel vm = new ViewModelProvider(this).get(MainActivityViewModel.class); // Pega um viewmodel do mainactivityviewmodel para este main
+                PlantaActivityViewModel vm = new ViewModelProvider(this).get(PlantaActivityViewModel.class); // Pega um viewmodel do mainactivityviewmodel para este main
 
-                List<MyItem> itens = vm.getReceitas()); // Pega a lista de itens no viewmodel recebido
+                List<MyItem> itens = vm.getReceitas(); // Pega a lista de itens no viewmodel recebido
 
                 itens.add(newItem); // Adiciona na lista de itens o item criado anteriormente
 
                 receitasMyAdapter.notifyItemInserted(itens.size()-1); // Avisa que um novo item foi criado
             }
+        }
+    }
+
+    // Método que fala para a aplicação utilizar o menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.planta_toolbar, menu);
+        return true;
+    }
+
+    // Método que indica o que acontece ao clicar em cada item
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+        switch(item.getItemId()) {
+            case R.id.opHome: // Indica o que ocorre no caso do ícone do home ser clicado
+                // Código para ir para MainActivity
+                return true;
+            case R.id.opSobreNos: // Indica o que ocorre no caso do ícone do sobre nós ser clicado
+                // Código para ir para Sobre Nós
+                return true;
+            case R.id.opConhecaProjeto: // Indica o que ocorre no caso do ícone do conheça o projeto ser clicado
+                // Código para ir para Conheça o Projeto
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 

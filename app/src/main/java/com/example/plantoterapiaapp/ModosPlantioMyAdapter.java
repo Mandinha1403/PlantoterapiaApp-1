@@ -36,13 +36,13 @@ public class ModosPlantioMyAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         MyItem myItem = modos_plantio.get(position);
         View v = holder.itemView;
-        ImageView imvPhoto = v.findViewById(R.id.modo_plantio_foto);
+        ImageView imvPhoto = v.findViewById(R.id.imvModoPlantioFoto);
         imvPhoto.setImageBitmap(myItem.photo);
 
-        TextView tvTitle = v.findViewById(R.id.modo_plantio_titulo);
+        TextView tvTitle = v.findViewById(R.id.tvEstruturaQuimicaTitulo);
         tvTitle.setText(myItem.title);
 
-        TextView tvDescription = v.findViewById(R.id.modo_plantio_descricao);
+        TextView tvDescription = v.findViewById(R.id.tvModoPlantioDescricao);
         tvDescription.setText(myItem.description);
 
     }
