@@ -1278,7 +1278,8 @@ int color test_mtrl_calendar_day 0x7f0600d0
 int color test_mtrl_calendar_day_selected 0x7f0600d1
 int color tooltip_background_dark 0x7f0600d2
 int color tooltip_background_light 0x7f0600d3
-int color white 0x7f0600d4
+int color verde_morto 0x7f0600d4
+int color white 0x7f0600d5
 int dimen abc_action_bar_content_inset_material 0x7f070000
 int dimen abc_action_bar_content_inset_with_nav 0x7f070001
 int dimen abc_action_bar_default_height_material 0x7f070002

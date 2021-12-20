@@ -56,12 +56,12 @@
         "source": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\src\\main\\res\\drawable\\ic_baseline_book_24.xml"
     },
     {
-        "merged": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_add_a_photo_24.xml.flat",
-        "source": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\src\\main\\res\\drawable\\ic_baseline_add_a_photo_24.xml"
-    },
-    {
         "merged": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_add_24.xml.flat",
         "source": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\src\\main\\res\\drawable\\ic_baseline_add_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_add_a_photo_24.xml.flat",
+        "source": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\src\\main\\res\\drawable\\ic_baseline_add_a_photo_24.xml"
     },
     {
         "merged": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\build\\intermediates\\merged_res\\debug\\font_playfair_display.xml.flat",
@@ -72,12 +72,12 @@
         "source": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\build\\intermediates\\merged_res\\debug\\layout_receitas_list.xml.flat",
-        "source": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\src\\main\\res\\layout\\receitas_list.xml"
-    },
-    {
         "merged": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\build\\intermediates\\merged_res\\debug\\layout_estruturas_quimicas_list.xml.flat",
         "source": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\src\\main\\res\\layout\\estruturas_quimicas_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\build\\intermediates\\merged_res\\debug\\layout_receitas_list.xml.flat",
+        "source": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\src\\main\\res\\layout\\receitas_list.xml"
     },
     {
         "merged": "C:\\Users\\20191TIIMI0100\\AndroidStudioProjects\\PlantoterapiaApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",

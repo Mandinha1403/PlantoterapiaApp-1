@@ -7,6 +7,21 @@
     android:background="#B6F1CE"
     tools:context=".CriarPostActivity">
 
+    <ImageButton
+        android:id="@+id/imbChooseImagePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddItemPost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvPhotoPreviewPost"
+        app:srcCompat="@drawable/ic_baseline_add_a_photo_24" />
+
     <Button
         android:id="@+id/btnModoPlantio"
         android:layout_width="110dp"
@@ -58,69 +73,67 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etMultiLine"
+        android:id="@+id/etDescriptionPost"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
         android:background="@drawable/bg_textview"
         android:ems="10"
         android:enabled="true"
         android:gravity="start|top"
         android:hint="Informações sobre o projeto"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintBottom_toTopOf="@+id/imvPhotoPreviewPost"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTitleName" />
+        app:layout_constraintTop_toBottomOf="@+id/etTitlePost" />
 
     <EditText
-        android:id="@+id/etTitleName"
+        android:id="@+id/etTitlePost"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/bg_textview"
         android:ems="10"
         android:hint="Título do Projeto"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/etMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/etDescriptionPost"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnModoPlantio" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/imvPhotoPreviewPost"
+        android:layout_width="239dp"
+        android:layout_height="152dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="32dp"
         android:background="@drawable/bg_textview"
-        app:layout_constraintBottom_toTopOf="@+id/btnSalvar"
+        app:layout_constraintBottom_toTopOf="@+id/imbChooseImagePost"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/etDescriptionPost"
         app:srcCompat="@drawable/ic_baseline_add_24" />
 
     <Button
-        android:id="@+id/btnSalvar"
+        android:id="@+id/btnAddItemPost"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="4dp"
         android:clickable="true"
         android:text="Salvar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

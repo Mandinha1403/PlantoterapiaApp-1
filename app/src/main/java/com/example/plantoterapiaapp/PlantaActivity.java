@@ -56,16 +56,37 @@ public class PlantaActivity extends AppCompatActivity {
         List<MyItem> estruturas_quimicas = vm.getEstruturas_quimicas(); // Pega a lista de itens no viewmodel recebido
 
         receitasMyAdapter = new ReceitasMyAdapter(this, receitas); // Cria uma variável do tipo MyAdapter que recebe a lista de itens
-        modosPlantioMyAdapter = new ModosPlantioMyAdapter(this, receitas); // Cria uma variável do tipo MyAdapter que recebe a lista de itens
-        estruturasQuimicasMyAdapter = new EstruturasQuimicasMyAdapter(this, receitas); // Cria uma variável do tipo MyAdapter que recebe a lista de itens
+        modosPlantioMyAdapter = new ModosPlantioMyAdapter(this, modos_plantio); // Cria uma variável do tipo MyAdapter que recebe a lista de itens
+        estruturasQuimicasMyAdapter = new EstruturasQuimicasMyAdapter(this, estruturas_quimicas); // Cria uma variável do tipo MyAdapter que recebe a lista de itens
 
+
+        // RecyclerView para receitas
         RecyclerView rvReceitas = findViewById(R.id.rvReceitas); // Define um recyclerview da interface através de seu id
         rvReceitas.setHasFixedSize(true); // Define que cada item da lista terá um tamanho igual (é algo que aumenta a velocidade)
 
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this); // Cria um tipo de layout de recyclerview, nesse caso linear
-        rvReceitas.setLayoutManager(layoutManager); // Define como os itens da lista serão apresentados, nesse caso sendo de modo linear de acordo com o layout de recyclerview criado anteriormente
+        RecyclerView.LayoutManager layoutManagerReceitas = new LinearLayoutManager(this); // Cria um tipo de layout de recyclerview, nesse caso linear
+        rvReceitas.setLayoutManager(layoutManagerReceitas); // Define como os itens da lista serão apresentados, nesse caso sendo de modo linear de acordo com o layout de recyclerview criado anteriormente
 
         rvReceitas.setAdapter(receitasMyAdapter); // Define qual adapter que vai construir os itens da lista
+
+
+        // Mesma coisa acima, mas para estruturas químicas
+        RecyclerView rvEstruturasQuimicas = findViewById(R.id.rvEstruturasQuimicas);
+        rvEstruturasQuimicas.setHasFixedSize(true);
+
+        RecyclerView.LayoutManager layoutManagerEstruturasQuimicas = new LinearLayoutManager(this);
+        rvEstruturasQuimicas.setLayoutManager(layoutManagerEstruturasQuimicas);
+
+        rvEstruturasQuimicas.setAdapter(estruturasQuimicasMyAdapter);
+
+        // Mesma coisa acima, mas para modos de plantio
+        RecyclerView rvModosPlantio = findViewById(R.id.rvModosPlantio);
+        rvModosPlantio.setHasFixedSize(true);
+
+        RecyclerView.LayoutManager layoutManagerModosPlantio = new LinearLayoutManager(this);
+        rvModosPlantio.setLayoutManager(layoutManagerModosPlantio);
+
+        rvModosPlantio.setAdapter(modosPlantioMyAdapter);
     }
 
     @Override
@@ -93,11 +114,13 @@ public class PlantaActivity extends AppCompatActivity {
 
                 PlantaActivityViewModel vm = new ViewModelProvider(this).get(PlantaActivityViewModel.class); // Pega um viewmodel do mainactivityviewmodel para este main
 
-                List<MyItem> itens = vm.getReceitas(); // Pega a lista de itens no viewmodel recebido
 
-                itens.add(newItem); // Adiciona na lista de itens o item criado anteriormente
 
-                receitasMyAdapter.notifyItemInserted(itens.size()-1); // Avisa que um novo item foi criado
+                List<MyItem> receitas = vm.getReceitas(); // Pega a lista de itens no viewmodel recebido
+
+                receitas.add(newItem); // Adiciona na lista de itens o item criado anteriormente
+
+                receitasMyAdapter.notifyItemInserted(receitas.size()-1); // Avisa que um novo item foi criado
             }
         }
     }
