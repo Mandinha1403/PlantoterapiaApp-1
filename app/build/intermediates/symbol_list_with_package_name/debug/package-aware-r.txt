@@ -2096,6 +2096,8 @@ id imvEstruturaQuimicaFoto
 id imvJessica
 id imvModoPlantioFoto
 id imvPhotoPreview
+id imvPlantaFoto
+id imvPlantaFoto2
 id imvReceitaFoto
 id imvSophia
 id included
@@ -2227,6 +2229,8 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id rvEstruturasQuimicas
+id rvModosPlantio
 id rvReceitas
 id save_non_transition_alpha
 id save_overlay_view
@@ -2354,6 +2358,9 @@ id tvModoPlantioDescricao
 id tvModoPlantioTitulo
 id tvNaoPossui
 id tvNauvia
+id tvPlantaDescricao2
+id tvPlantaTitulo
+id tvPlantaTitulo2
 id tvPossui
 id tvReceitaDescricao
 id tvReceitaTitulo
